@@ -29,6 +29,7 @@ class _FullScreenImageState extends State<FullScreenImage> {
   }
 
   changeSize(fullscreen) {
+    //changing size of image as per users actions
     if (fullscreen) {
       imageHeight = MediaQuery.of(context).size.height;
       imageWidth = MediaQuery.of(context).size.width;
@@ -42,6 +43,7 @@ class _FullScreenImageState extends State<FullScreenImage> {
   @override
   Widget build(BuildContext context) {
     if (instance) {
+      // initially setting image view as fullscreen, #this will be called only once when page is loaded
       instance = false;
       changeSize(true);
     }
@@ -78,7 +80,7 @@ class _FullScreenImageState extends State<FullScreenImage> {
                   border: Border.all(
                     color: Colors.black12,
                   ),
-                  borderRadius: BorderRadius.all(Radius.circular(10))),
+                  borderRadius: const BorderRadius.all(Radius.circular(10))),
               height: 70,
               //  width: MediaQuery.of(context).size.width * .7,
               child: Padding(
@@ -98,6 +100,7 @@ class _FullScreenImageState extends State<FullScreenImage> {
                         )),
                     IconButton(
                         onPressed: () {
+                          //changing image view as fullscreen or fitted mode
                           fullscreen = !fullscreen;
                           changeSize(fullscreen);
                         },

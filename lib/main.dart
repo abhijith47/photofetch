@@ -6,6 +6,9 @@ import 'UI/splashScreen.dart';
 import 'providers/imageProvider.dart';
 
 void main() {
+  //Please go through readme.md file for detailed documentation
+  //code documentation available along with code
+  //setting toolbar and system navigationbar colors to white for ui requirements
   SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(
     systemNavigationBarIconBrightness: Brightness.dark,
     statusBarColor: Colors.white,

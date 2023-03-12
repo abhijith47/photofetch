@@ -1,3 +1,6 @@
+
+//creating a custom model for image
+
 class imageModel {
   final String? id;
   final String? albumId;

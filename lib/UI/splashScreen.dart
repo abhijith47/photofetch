@@ -16,6 +16,7 @@ class _SplashPageState extends State<SplashPage> {
   }
 
   navigate() {
+    //rerouting to next screen after displaying splash screen for a few seconds
     Future.delayed(const Duration(milliseconds: 3500), () {
       Navigator.of(context).pushNamedAndRemoveUntil(
           '/homepage', (Route<dynamic> route) => false);
